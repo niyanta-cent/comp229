@@ -1,0 +1,71 @@
+/* custom css goes here */
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.sub-section{
+    width: 90%;
+    height:100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+#home h1{
+    font-size: 5rem;
+    text-align:center;
+
+}
+
+#home h4{
+    text-align: center;
+}
+
+.about-me{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-me-body{
+    margin-bottom: 20px;
+}
+
+#services{
+    width: 70%;
+    height:100%;
+    margin: auto;
+    text-align: center;
+}
+
+.my-services {
+    background-size: cover;
+    text-align: center;
+}
+
+.service-heading {
+    position: relative;
+}
+
+.service-heading::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
