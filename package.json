@@ -1,5 +1,5 @@
 {
-  "name": "Niyanta_Portfolio",
+  "name": "niyanta_portfolio",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -21,7 +21,7 @@
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
   },
-  "description": "demo app for COMP229 Week 3",
+  "description": "my portfolio website.",
   "main": "index.js",
   "devDependencies": {},
   "repository": {
