@@ -1,0 +1,50 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <div id="contact">
+    <section>
+        <style>
+             body {
+            background-image: url('Assets/images/bg1.jpg');
+            background-size: cover;
+          }
+          
+        </style>
+       <h3 style="font-family: Arial, Helvetica, sans-serif;"><b style="color: darkslategrey;"><br>Contact me here:</b></h3><br>
+       <h4 style="font-family: Arial, Helvetica, sans-serif;"><b style="color:black">Email:</b>niyantasiddhapura98@gmail.com<br><b style="text-align: left;">
+         Contact no:</b> +2323408434
+       </b></h4>
+
+        <h3 style="font-family:Arial, Helvetica, sans-serif;"><br><b style="color:darkslategrey;">Provide your details here:</b> </h3>
+        <form action="/" method="POST">
+        <div class="form-group col-lg-12" style="text-align:left">
+            <label for="input1" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" ><b>Name:</b> </label>
+            <input type="text" class="form-control input-sm" id="input1" name="fname" aria-describedby="fnameHelp" >
+            <br>
+            <label for="input2" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Last Name:</b></label>
+            <input type="text" class="form-control input-sm" id="input2" name="lname" aria-describedby="lnameHelp" >
+            <br>
+            <label for="input3" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Contact No:</b></label>
+            <input type="text" class="form-control input-sm" id="input3" name="contact" aria-describedby="contactHelp" >
+            <br>
+            <label for="input4" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Email address:</b></label>
+            <input type="email" class="form-control" id="input4" name="email" aria-describedby="emailHelp">
+        
+        
+            <br>
+            <label for="formControlTextarea1" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><b>Message:</b></label>
+            <textarea class="form-control" id="formControlTextarea1" name="message" rows="2" ></textarea>
+            <br>
+        </div>
+        <button href="#home" type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+    <br><br><br>
+</div>
+  
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
