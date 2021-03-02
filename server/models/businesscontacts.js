@@ -3,8 +3,8 @@ let mongoose = require('mongoose');
 // create a model class
 let businessContactModel = mongoose.Schema({
     name: String,
-    Contact: Number,
-    Email: String,
+    contact: Number,
+    email: String,
     location: String
     
 },

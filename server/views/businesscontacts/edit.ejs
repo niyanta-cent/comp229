@@ -1,60 +1,55 @@
 <%- include ../partials/header.ejs %>
 
 <%- include ../partials/main_nav.ejs %>
-
+<style>
+    body {
+        background-color:cadetblue;
+     
+      
+    }
+</style>
 <!-- Content for the Add page -->
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
+            <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><%= title %>:</h1>
 
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameTextField">Contact Name</label>
+                    <label for="nameTextField"><b>Contact Name:</b></label>
                     <input type="text" class="form-control"
                     id="nameTextField"
                     placeholder="Enter the contact name"
                     name="name" 
-                    value="<%= businessContact.name %>"
+                    value="<%= businesscontacts.name %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="authorTextField">Contact</label>
+                    <label for="authorTextField"><b>Contact Number:</b></label>
                     <input type="text" class="form-control"
                     id="authorTextField"
                     placeholder="Enter the contact number"
                     name="contact" 
-                    value="<%= businessContact.contact %>"
+                    value="<%= businesscontacts.contact %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="publishedTextField">Email</label>
+                    <label for="publishedTextField"><b>Email address:</b></label>
                     <input type="text" class="form-control"
                     id="publishedTextField"
-                    placeholder="Enter an email"
+                    placeholder="Enter the email addres"
                     name="email" 
-                    value="<%= busineesContact.email %>"
+                    value="<%= businesscontacts.email %>"
                     required>
                 </div>
-
-                <div class="form-group">
-                    <label for="descriptionTextArea">Location</label>
-                    <textarea type="text" class="form-control"
-                    id="descriptionTextArea"
-                    placeholder="Enter the location"
-                    name="description" 
-                    required>
-                    <%= busineesContact.location %>
-                    </textarea>
-                </div>
-
-                
 
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
                 
+                    <a href="/contact-list/delete/<%= businesscontacts._id %>" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash-alt"></i> Delete</a>
                     <a href="/contact-list" class="btn btn-warning">
                         <i class="fas fa-undo"></i> Cancel</a>
 

@@ -1,57 +1,54 @@
 <%- include ../partials/header.ejs %>
 
 <%- include ../partials/main_nav.ejs %>
-  
 
+<style>
+    body {
+        
+        background-image: url('Assets/images/bg1.jpg');
+  background-size: cover;
+      
+    }
+</style>
   <!-- Main Content -->
   <main class="container">
     <div class="row">
-        <div class="offset-md-1 col-md-11">
-            <h1><%= title %></h1>
 
-            <% if(typeof displayName == 'string' && displayName) { %>
+        <div class="offset-md-offset-1 col-md-11">
+            <h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><%= title %>:</h1>
+
+            
                 <a href="/contact-list/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle"></i> Add a Contact</a>
-            <% } %>
-            <br>
+            
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
                 <tr class="d-flex">
-                    <% if(typeof displayName == 'string' && displayName) { %>
-                        <th class="text-center col-2">Name</th>
+                   
+                        <th class="text-center col-3">Name</th>
                         <th class="text-center col-2">Contact</th>
-                        <th class="text-center col-1">Email</th>
-                        <th class="text-center col-1"></th>
-                        <th class="text-center col-1"></th>
-                    <% } else { %>
-                        <th class="text-center col-2">Name</th>
-                        <th class="text-center col-2">Contact</th>
-                        <th class="text-center col-1">Email</th>
-                    <% } %>
+                        <th class="text-center col-3">Email</th>
+                        <th class="text-center col-2"></th>
+                        <th class="text-center col-2"></th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
-
                 <% for(let count = 0; count < BusinessContactList.length; count++) { %>
                     <tr class="d-flex">
-                        <% if(typeof displayName == 'string' && displayName) { %>
-                            <td class="text-center col-2"><%= BusinessContactList[count].name %></td>
+                        
+                            <td class="text-center col-3"><%= BusinessContactList[count].name %></td>
                             <td class="text-center col-2"><%= BusinessContactList[count].contact %></td>
-                            <td class="text-center col-1"><%= BusinessContactList[count].email %></td>           
-                            <td class="text-center col-1">
+                            <td class="text-center col-3"><%= BusinessContactList[count].email %></td>
+                           
+                            <td class="text-center  col-2">
                                 <a href="/contact-list/edit/<%= BusinessContactList[count]._id %>" class="btn btn-primary btn-sm">
-                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                                <i class="fas fa-pencil-alt"></i>Update</a>
                             </td>
-                            <td class="text-center col-1">
+                            <td class="text-center col-2">
                                 <a href="/contact-list/delete/<%= BusinessContactList[count]._id %>" class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
-                         <% } else { %>
-                            <td class="text-center col-2"><%= BusinessContactList[count].name %></td>
-                            <td class="text-center col-2"><%= BusinessContactList[count].contact %></td>
-                            <td class="text-center col-1"><%= BusinessContactList[count].email %></td>
-                            
-                         <% } %>
+                          
                     </tr>
                 <% } %>
             </table>

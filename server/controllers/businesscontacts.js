@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 const businesscontacts = require('../models/businesscontacts');
 
-
+let jwt = require('jsonwebtoken');
 // create a reference to the model
 let BusinessContacts = require('../models/businesscontacts');
 
@@ -15,8 +15,8 @@ module.exports.displayContactList = (req, res, next) => {
         }
         else
         {
-            //console.log(BookList);
-
+           //sort the data alphabetically using the first name
+            contactList.sort((a, b) => a.name.localeCompare(b.name))
             res.render('businesscontacts/list', 
             {title: 'Business Contacts', 
             BusinessContactList: contactList, 
@@ -108,7 +108,7 @@ module.exports.performDelete = (req, res, next) => {
         else
         {
              // refresh the book list
-             res.redirect('/conatact-list');
+             res.redirect('/contact-list');
         }
     });
 }
